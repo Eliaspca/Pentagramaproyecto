@@ -1,0 +1,7 @@
+{
+  "name": "Pentagramaproyecto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
