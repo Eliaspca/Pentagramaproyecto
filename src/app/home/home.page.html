@@ -6,7 +6,7 @@
     <ion-item color= "primary">
       <ion-label>Itz Pentagrama</ion-label>
       <ion-avatar slot="end">
-        <img src="assets/img/pentagrama.PNG">
+      <img src="assets/img/pentagrama.PNG"/>
       </ion-avatar>
     </ion-item>
   </ion-list>
@@ -15,8 +15,31 @@
   </div>
 </ion-header>
 
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
 
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+       <b><ion-card-title>Los mejores instrumentos</ion-card-title></b> 
 
-<ion-content>
+      </ion-card-header>
 
+      <ion-slides pager="true">
+        <ion-slide class="slide1">
+          <img src="assets/img/Guitarra.PNG">
+        </ion-slide>
+        <ion-slide class="slide2">
+          <img src="assets/img/drum.PNG">
+        </ion-slide>
+        <ion-slide class="slide3">
+          <img src="assets/img/piano.PNG">
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </div>
+  
 </ion-content>
