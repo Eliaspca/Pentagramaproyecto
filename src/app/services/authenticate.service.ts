@@ -64,4 +64,10 @@ export class AuthenticateService {
       })
     })
   }
+
+  CerrarSesion() {    
+     this.storage.remove("user_id")      
+     this.storage.set('isUserLoggedIn',false);  
+    } 
+
 }

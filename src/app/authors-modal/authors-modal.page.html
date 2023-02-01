@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">Cerrar</ion-button>
+    </ion-buttons>
+    
+    
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="ion-text-center">{{authors_id.name}}</h1>
+  <img src="{{authors_id.photo}}" class="cover"/>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">Seguidores</ion-col>
+      <ion-col class="ion-text-center">Popularidad</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">{{authors_id.followers}}</ion-col>
+      <ion-col class="ion-text-center">{{authors_id.popularity}}</ion-col>
+    </ion-row>
+    <p class="ion-margin"><ion-icon name="calendar-outline"></ion-icon> {{authors_id.created_at}}</p>
+  <p class="ion-margin"><ion-icon name="calendar-outline"></ion-icon> {{authors_id.updated_at}}</p>
+  <p class="ion-margin">Generos:</p>
+  <ion-badge *ngFor="let gender of authors_id.genres" class="ion-margin">{{gender}}</ion-badge>
+  </ion-grid>
+  
+  
+</ion-content>

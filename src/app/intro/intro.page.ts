@@ -18,25 +18,29 @@ export class IntroPage implements OnInit {
 
   slides = [
     {
-      title: "Title 1",
-      desc: "sdasdfsd",
-      subtitle: "subtitle 1",
-      img: "https://www.zooplus.es/magazine/wp-content/uploads/2022/05/Cuanto-pesa-un-gato-2.jpeg",
-      description: "Lorem Ipsum  and typesetting industry."
+      title: "Los mejores instrumentos",
+      desc: "Pentagrama",
+      subtitle: "",
+      img: "../assets/img/books.png"
     },
     {
-      title: "Title 2",
-      desc: "",
-      subtitle: "subtitle 2",
-      img: "assets/logo.png",
-      description: "Lorem Ipsum is simply dummy text of the printing ."
+      title: "Libros para niños",
+      desc: "Los mejores libros para niños de 5 - 8 años",
+      subtitle: "",
+      img: "../assets/img/books2.png"
     },
     {
-      title: "Title 3",
+      title: "Ciencia Ficcion",
       desc: null,
-      subtitle: "subtitle 3",
-      img: "https://www.zooplus.es/magazine/wp-content/uploads/2022/05/Cuanto-pesa-un-gato-2.jpeg",
-      description: "simply dummy text of the printing and typesetting industry."
+      subtitle: "",
+      img: ""
+    }
+,
+    {
+      title: "Ciencia Ficcion",
+      desc: null,
+      subtitle: "",
+      img: ""
     }
   ]
 
@@ -45,7 +49,7 @@ export class IntroPage implements OnInit {
 
   finish(){
     this.storage.set("isIntroShowed", true);
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/menu/home");
   }
   ngOnInit() {
   }

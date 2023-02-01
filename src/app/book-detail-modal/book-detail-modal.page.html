@@ -28,10 +28,11 @@
     <ion-row>
       <ion-col class="ion-text-center">{{book.pages}}</ion-col>
       <ion-col class="ion-text-center">{{book.editorial}}</ion-col>
-    </ion-row>
-  </ion-grid>
-  <p class="ion-margin ion-text-justify">{{book.resumen}}</p>
+      <p class="ion-margin ion-text-justify">{{book.resumen}}</p>
   <p class="ion-margin"><ion-icon name="calendar-outline"></ion-icon> {{book.published_date}}</p>
   <p class="ion-margin">Generos:</p>
   <ion-badge *ngFor="let gender of book.genres" class="ion-margin">{{gender}}</ion-badge>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>

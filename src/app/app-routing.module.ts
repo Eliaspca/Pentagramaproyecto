@@ -32,7 +32,15 @@ const routes: Routes = [
   {
     path: 'book-detail-modal',
     loadChildren: () => import('./book-detail-modal/book-detail-modal.module').then( m => m.BookDetailModalPageModule)
+  },  {
+    path: 'authors-modal',
+    loadChildren: () => import('./authors-modal/authors-modal.module').then( m => m.AuthorsModalPageModule)
+  },
+  {
+    path: 'books-top10',
+    loadChildren: () => import('./books-top10/books-top10.module').then( m => m.BooksTop10PageModule)
   }
+
 ];
 
 @NgModule({

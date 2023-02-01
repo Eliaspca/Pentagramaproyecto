@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController, NavController } from '@ionic/angular';
+import { AuthenticateService } from '../services/authenticate.service'; 
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,8 @@ import { MenuController, NavController } from '@ionic/angular';
 export class MenuPage implements OnInit {
 
   constructor(private menu: MenuController,
-      private navCtrl: NavController
+      private navCtrl: NavController,
+      private logout: AuthenticateService
     ) { }
 
   ngOnInit() {
@@ -19,8 +21,9 @@ export class MenuPage implements OnInit {
     this.menu.close();
   }
 
-  logout(){
-    this.navCtrl.navigateRoot("/login");
+  CerrarSesion(){
+    this.logout.CerrarSesion();  
+    this.navCtrl.navigateRoot("/login"); 
   }
 
   goToAuthors(){
@@ -42,5 +45,11 @@ export class MenuPage implements OnInit {
     this.navCtrl.navigateRoot("/menu/favorite-books");
     this.menu.close();
   }
+
+  goTop10(){
+    this.navCtrl.navigateRoot("/menu/books-top10");
+    this.menu.close();
+  }
+  
 
 }

@@ -12,10 +12,15 @@ import { Storage } from '@ionic/storage';
 export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
+  
   validation_message = {
     email: [
       { type: "required", message: "El Email es Obligatorio" },
       { type: "pattern", message: "Tu email no es valido" }
+    ],
+    password: [
+      { type: "required", message: "El password es Obligatorio" },
+      
     ]
   }
 
@@ -70,6 +75,11 @@ export class LoginPage implements OnInit {
       }
     );
     await alert.present();
+  }
+
+  IrRegistro(){
+    this.navCtrl.navigateRoot("/register");
+    
   }
 
 }

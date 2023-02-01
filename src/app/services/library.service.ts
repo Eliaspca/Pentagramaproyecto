@@ -62,4 +62,10 @@ export class LibraryService {
     return this.http.post(`${this.urlServer}dislike`, params, this.httpHeaders)
   }
 
+  getTop10(){
+    return fetch("https://librarypca.fly.dev/top_books").then(
+      topBooks10 => topBooks10.json()
+    );
+  }
+
 }

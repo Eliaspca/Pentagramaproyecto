@@ -1,3 +1,12 @@
+ion-toolbar{
+    --background: #399F8B;
+    
+}
+h1 {
+
+    color: #399F8B;
+}
+
 ion-avatar {
     height: 150px;
     width: 100%;
@@ -13,6 +22,7 @@ ion-card {
     margin: 0;
     padding: 0;
     height: 100px;
+    background: #399F8B;
 }
 
 ion-card ion-card-header {
